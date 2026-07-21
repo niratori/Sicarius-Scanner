@@ -6,7 +6,7 @@ Plataforma web para análise automatizada de vulnerabilidades em sites, usando a
 
 **Segurança:** OWASP ZAP (Spider + Active Scan via API REST)
 
-## 👥 Equipe de Desenvolvimento
+## Equipe de Desenvolvimento
 
 Este projeto foi construído de forma colaborativa pelos seguintes autores:
 
