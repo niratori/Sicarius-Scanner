@@ -6,6 +6,15 @@ Plataforma web para análise automatizada de vulnerabilidades em sites, usando a
 
 **Segurança:** OWASP ZAP (Spider + Active Scan via API REST)
 
+## 👥 Equipe de Desenvolvimento
+
+Este projeto foi construído de forma colaborativa pelos seguintes autores:
+
+| Nome Completo | Perfil GitHub |
+| :--- | :--- |
+| **Nouan Dzulinski** | [github.com/niratori](https://github.com/niratori) |
+| **Luana Kulczyk** | [github.com/katsukiluana-cyber](https://github.com/katsukiluana-cyber) |
+
 ## Arquitetura (backend em camadas)
 
 ```
