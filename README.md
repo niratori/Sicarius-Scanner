@@ -4,10 +4,6 @@ Plataforma web para análise automatizada de vulnerabilidades em sites, usando a
 
 > Use apenas em sites que você possui ou tem autorização explícita para testar. Escanear sites de terceiros sem permissão pode ser ilegal.
 
-## Stack
-
-**Backend:** Node.js, Express, MongoDB (Mongoose), JWT, bcrypt, Axios, Zod, Helmet, express-rate-limit
-**Frontend:** React, Vite, React Router, Axios, TailwindCSS, Recharts
 **Segurança:** OWASP ZAP (Spider + Active Scan via API REST)
 
 ## Arquitetura (backend em camadas)
