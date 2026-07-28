@@ -1,0 +1,71 @@
+services:
+  zap:
+    image: ghcr.io/zaproxy/zaproxy:stable
+    container_name: sicarius-zap
+    restart: unless-stopped
+
+    command:
+      - zap.sh
+      - -daemon
+      - -host
+      - 0.0.0.0
+      - -port
+      - "8080"
+      - -config
+      - api.key=${}
+      - -config
+      - api.addrs.addr.name=.*
+      - -config
+      - api.addrs.addr.regex=true
+
+    expose:
+      - "8080"
+
+    volumes:
+      - zap_data:/home/zap/.ZAP
+
+    networks:
+      - sicarius-network
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+
+    container_name: sicarius-backend
+    restart: unless-stopped
+
+    depends_on:
+      - zap
+
+    environment:
+      NODE_ENV: production
+      PORT: 5000
+
+      MONGO_URI: ${}
+
+      JWT_SECRET: ${}
+      JWT_EXPIRES_IN: 7d
+
+      ZAP_API_URL: http://zap:8080
+      ZAP_API_KEY: ${ZAP_API_KEY}
+      ZAP_SPIDER_TIMEOUT_MS: 72000000
+      ZAP_ACTIVE_SCAN_TIMEOUT_MS: 72000000
+      ZAP_POLL_INTERVAL_MS: 3000
+
+      FRONTEND_URL: ${}
+
+      RATE_LIMIT_WINDOW_MS: 900000
+      RATE_LIMIT_MAX: 200
+
+    ports:
+      - "127.0.0.1:5000:5000"
+
+    networks:
+      - sicarius-network
+
+networks:
+  sicarius-network:
+
+volumes:
+  zap_data:
