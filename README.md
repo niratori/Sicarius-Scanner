@@ -43,7 +43,7 @@ backend/src/
 
 ## Segurança implementada
 
-- Senhas com hash bcrypt (12 salt rounds)
+- Senhas com hash bcrypt (12 salt rounds
 - Autenticação via JWT
 - Validação de entrada com Zod em todas as rotas de escrita
 - Helmet (cabeçalhos HTTP seguros), CORS restrito ao frontend configurado, rate limiting global
