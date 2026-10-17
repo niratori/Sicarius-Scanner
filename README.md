@@ -13,6 +13,7 @@ Este projeto foi construído de forma colaborativa pelos seguintes autores:
 | Nome Completo | Perfil GitHub |
 | :--- | :--- |
 | **Nouan Dzulinski** | [github.com/niratori](https://github.com/niratori) |
+| **Gabriel Rocha Martins** | [github.com/Coyoss](https://github.com/Coyoss) |
 | **Luana Kulczyk** | [github.com/katsukiluana-cyber](https://github.com/katsukiluana-cyber) |
 
 ## Arquitetura (backend em camadas)
